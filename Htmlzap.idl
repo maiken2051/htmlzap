@@ -49,6 +49,7 @@ import "ocidl.idl";
 		[id(21), helpstring("Combine a base and relative URL")] HRESULT URLCombine([in] BSTR baseURL, [in] BSTR relativeURL, [in] BOOL escapeChars, [out, retval] BSTR *combinedURL);
 		[id(22), helpstring("Canonicalize a URL")] HRESULT URLCanonicalize([in] BSTR rawURL, [in] BOOL escapeChars, [out, retval] BSTR *canonURL);
 		[id(23), helpstring("Remove a parameter from the tag")] HRESULT RemoveParam([in] VARIANT param);
+		[propget, id(24), helpstring("Is the tag closed (/>)?")] HRESULT ClosedTag([out, retval] BOOL *pVal);
 	};
 
 	

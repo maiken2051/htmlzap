@@ -4,3 +4,11 @@ Dist/
 *.res
 *.idb
 *.pch
+*.sdf
+*.suo
+*.tlog
+*.log
+*.lastbuildstate
+*.pdb
+ipch/
+*.intermediate.manifest

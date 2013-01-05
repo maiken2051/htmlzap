@@ -309,6 +309,19 @@ return S_OK;
 
 
 //
+// Is this a closed tag?
+//
+
+STDMETHODIMP CHtmlParse::get_ClosedTag(BOOL * pVal)
+{
+
+	*pVal = (closedTag) ? VBTRUE : VBFALSE;				// ClosedTag 
+
+return S_OK;
+}
+
+
+//
 // Get the name of the tag
 //
 
@@ -672,6 +685,8 @@ STDMETHODIMP CHtmlParse::Next()
 
 	nParams = 0;
 
+	closedTag = false;
+
 	TextMode = true;					// Default to text mode
 
 	if (posn >= eob || htbuf == NULL)
@@ -824,6 +839,8 @@ STDMETHODIMP CHtmlParse::Next()
 	while (isspace_ptr(posn) && posn < eob)
 		posn++;							// Skim over any whitespace
 
+	bool tnSlash = false;
+
 	while (*posn != '>' && posn < eob) 	// Process the whole tag
 	{
 		tbp = cpybuf;
@@ -836,7 +853,11 @@ STDMETHODIMP CHtmlParse::Next()
 
 		*tbp = EOS;						// End of the tag name
 
-		ps->pName = MakeString(cpybuf, i = (tbp - cpybuf), "Param name");	// Set the param name
+		int i = (tbp - cpybuf);
+
+		tnSlash = (i == 1 && cpybuf[0] == '/');
+
+		ps->pName = MakeString(cpybuf, i, "Param name");	// Set the param name
 
 		if (i >= MAX_CNLEN)
 			i = MAX_CNLEN;
@@ -893,6 +914,13 @@ STDMETHODIMP CHtmlParse::Next()
 
 	if (*posn == '>')					// Skip closing >
 		posn++;
+
+	if (nParams > 0 && tnSlash)
+	{
+		closedTag = true;
+
+		nParams--;
+	}
 
 	//
 	// Handle scripts...

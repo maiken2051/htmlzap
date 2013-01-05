@@ -112,6 +112,7 @@ public:
 	STDMETHOD(get_Text)(/*[out, retval]*/ BSTR *pVal);
 	STDMETHOD(get_PValue)(/*[int]*/ short pIndex, /*[out, retval]*/ BSTR *pVal);
 	STDMETHOD(get_PName)(/*[in]*/ short pIndex, /*[out, retval]*/ BSTR *pVal);
+	STDMETHOD(get_ClosedTag)(/*[out, retval]*/ BOOL *pVal);
 	HRESULT OnDraw(ATL_DRAWINFO& di);
 
 	HRESULT STDMETHODCALLTYPE CHtmlParse::InterfaceSupportsErrorInfo(REFIID riid);
@@ -157,6 +158,8 @@ protected:
 
 	int nParams;			// Number of parameters in table
 
+	bool closedTag;			// Tag is />
+
 	bool cWS;				// Compress Whitespace
 
 	short HeaderLevel;		// Current header level
@@ -183,6 +186,8 @@ public:
 		orig = NULL;
 		HeaderLevel = 0;
 		mapdfile = false;
+
+		closedTag = false;
 
 		fhd = fmap = NULL;
 
