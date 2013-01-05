@@ -1,0 +1,121 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Htmlzap - Win32 Release MinDependency--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "h:\temp\RSP5A09.bat" with contents
+[
+@echo off
+midl /Oicf /h "Htmlzap.h" /iid "Htmlzap_i.c" "Htmlzap.idl"
+]
+Creating command line "h:\temp\RSP5A09.bat"
+Creating command line "rc.exe /l 0x409 /fo"ReleaseMinDependency/Htmlzap.res" /d "NDEBUG" "H:\My Documents\Utilities\Vc\Htmlzap\Htmlzap.rc"" 
+Performing MIDL step
+Microsoft (R) 32b/64b MIDL Compiler Version 5.03.0280 
+Copyright (c) Microsoft Corp 1991-1999. All rights reserved.
+Processing .\Htmlzap.idl
+Htmlzap.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\oaidl.idl
+oaidl.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\objidl.idl
+objidl.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\unknwn.idl
+unknwn.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\wtypes.idl
+wtypes.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\basetsd.h
+basetsd.h
+Processing G:\Program Files\Microsoft Platform SDK\include\guiddef.h
+guiddef.h
+Processing G:\Program Files\Microsoft Platform SDK\include\ocidl.idl
+ocidl.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\oleidl.idl
+oleidl.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\servprov.idl
+servprov.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\urlmon.idl
+urlmon.idl
+Processing G:\Program Files\Microsoft Platform SDK\include\msxml.idl
+msxml.idl
+64 bit Processing .\Htmlzap.idl
+Htmlzap.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\oaidl.idl
+oaidl.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\objidl.idl
+objidl.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\unknwn.idl
+unknwn.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\wtypes.idl
+wtypes.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\basetsd.h
+basetsd.h
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\guiddef.h
+guiddef.h
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\ocidl.idl
+ocidl.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\oleidl.idl
+oleidl.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\servprov.idl
+servprov.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\urlmon.idl
+urlmon.idl
+64 bit Processing G:\Program Files\Microsoft Platform SDK\include\msxml.idl
+msxml.idl
+Creating temporary file "h:\temp\RSP5A22.tmp" with contents
+[
+/nologo /MT /W3 /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Fp"ReleaseMinDependency/Htmlzap.pch" /Yu"stdafx.h" /Fo"ReleaseMinDependency/" /Fd"ReleaseMinDependency/" /FD /c 
+"H:\My Documents\Utilities\Vc\Htmlzap\HtmlParse.cpp"
+"H:\My Documents\Utilities\Vc\Htmlzap\Htmlzap.cpp"
+"H:\My Documents\Utilities\Vc\Htmlzap\StringAccumulator.cpp"
+]
+Creating command line "cl.exe @h:\temp\RSP5A22.tmp" 
+Creating temporary file "h:\temp\RSP5A23.tmp" with contents
+[
+/nologo /MT /W3 /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /Fp"ReleaseMinDependency/Htmlzap.pch" /Yc"stdafx.h" /Fo"ReleaseMinDependency/" /Fd"ReleaseMinDependency/" /FD /c 
+"H:\My Documents\Utilities\Vc\Htmlzap\StdAfx.cpp"
+]
+Creating command line "cl.exe @h:\temp\RSP5A23.tmp" 
+Creating temporary file "h:\temp\RSP5A24.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /base:"0x47000000" /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinDependency/Htmlzap.pdb" /machine:I386 /def:".\Htmlzap.def" /out:"ReleaseMinDependency/Htmlzap.dll" /implib:"ReleaseMinDependency/Htmlzap.lib" /delayload:shlwapi.dll 
+".\ReleaseMinDependency\HtmlParse.obj"
+".\ReleaseMinDependency\Htmlzap.obj"
+".\ReleaseMinDependency\StdAfx.obj"
+".\ReleaseMinDependency\StringAccumulator.obj"
+".\ReleaseMinDependency\Htmlzap.res"
+"G:\Program Files\Microsoft Platform SDK\Lib\ShLwApi.Lib"
+"G:\Program Files\Microsoft Visual Studio\VC98\Lib\DELAYIMP.LIB"
+]
+Creating command line "link.exe @h:\temp\RSP5A24.tmp"
+Creating temporary file "h:\temp\RSP5A25.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinDependency\Htmlzap.dll"
+echo regsvr32 exec. time > ".\ReleaseMinDependency\regsvr32.trg"
+]
+Creating command line "h:\temp\RSP5A25.bat"
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+HtmlParse.cpp
+Htmlzap.cpp
+StringAccumulator.cpp
+Generating Code...
+Linking...
+   Creating library ReleaseMinDependency/Htmlzap.lib and object ReleaseMinDependency/Htmlzap.exp
+<h3>Output Window</h3>
+Registering ActiveX Control...
+RegSvr32: DllRegisterServer in .\ReleaseMinDependency\Htmlzap.dll succeeded.
+
+
+
+
+<h3>Results</h3>
+Htmlzap.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

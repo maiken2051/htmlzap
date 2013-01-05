@@ -1,0 +1,34 @@
+HKCR
+{
+	HtmlZap.HtmlZap.1 = s 'HtmlZap ATL Control'
+	{
+		CLSID = s '{053957FE-CB0A-11D0-8988-444553540000}'
+	}
+	HtmlZap.HtmlZap = s 'HtmlZap ATL Control'
+	{
+		CurVer = s 'HtmlZap.HtmlZap.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {053957FE-CB0A-11D0-8988-444553540000} = s 'HtmlZap ATL Control'
+		{
+			ProgID = s 'HtmlZap.HtmlZap.1'
+			VersionIndependentProgID = s 'HtmlZap.HtmlZap'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 201'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '132497'
+			}
+			'TypeLib' = s '{053957F0-CB0A-11D0-8988-444553540000}'
+			'Version' = s '1.0'
+		}
+	}
+}

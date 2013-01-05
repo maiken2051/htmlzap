@@ -1,0 +1,34 @@
+HKCR
+{
+	StringAccumulator.StringAccumulator.1 = s 'StringAccumulator Control'
+	{
+		CLSID = s '{AF469F02-13E3-11D1-8988-444553540000}'
+	}
+	StringAccumulator.StringAccumulator = s 'StringAccumulator Control'
+	{
+		CurVer = s 'StringAccumulator.StringAccumulator.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AF469F02-13E3-11D1-8988-444553540000} = s 'StringAccumulator Control'
+		{
+			ProgID = s 'StringAccumulator.StringAccumulator.1'
+			VersionIndependentProgID = s 'StringAccumulator.StringAccumulator'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 203'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '132497'
+			}
+			'TypeLib' = s '{053957F0-CB0A-11D0-8988-444553540000}'
+			'Version' = s '1.0'
+		}
+	}
+}

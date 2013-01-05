@@ -1,0 +1,99 @@
+//
+// HTMLZAP --- Simple HTML parsing ActiveX control (ATL)
+//
+// Copyright (C) 1998 Michael Newcomb
+//
+// Commercial reuse prohibited.
+//
+#include <olectl.h>
+// Htmlzap.idl : IDL source for Htmlzap.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Htmlzap.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+	[
+		object,
+		uuid(053957FD-CB0A-11D0-8988-444553540000),
+		dual,
+		helpstring("HtmlZap Interface"),
+		pointer_default(unique)
+	]
+	interface IHtmlParse : IDispatch
+	{
+		[propget, id(2), helpstring("Parameter Name array")] HRESULT PName([in] short Index, [out, retval] BSTR *pVal);
+		[propget, id(3), helpstring("Parameter Value array")] HRESULT PValue([in] short Index, [out, retval] BSTR *pVal);
+		[propget, id(4), helpstring("Text (for non-tags)")] HRESULT Text([out, retval] BSTR *pVal);
+		[propget, id(5), helpstring("EOF flag")] HRESULT EOF([out, retval] BOOL *pVal);
+		[id(7), helpstring("Reset the control")] HRESULT Reset();
+		[id(8), helpstring("Load a file")] HRESULT Load([in] BSTR FileName);
+		[id(9), helpstring("Load from Buffer")] HRESULT LoadBuffer([in] VARIANT Buffer);
+		[id(10), helpstring("Rewind to start of file")] HRESULT Rewind();
+		[id(11), helpstring("Next slice")] HRESULT Next();
+		[propget, id(12), helpstring("Parameter by Name array")] HRESULT Param([in] BSTR ParamName, [out, retval] BSTR *pVal);
+		[propput, id(12), helpstring("Parameter by Name array")] HRESULT Param([in] BSTR ParamName, [in] BSTR newVal);
+		[propget, id(13), helpstring("Compress Whitespace")] HRESULT CompressWS([out, retval] BOOL *pVal);
+		[propput, id(13), helpstring("Compress Whitespace")] HRESULT CompressWS([in] BOOL newVal);
+		[propget, id(14), helpstring("Current slice is a Tag")] HRESULT IsTag([out, retval] BOOL *pVal);
+		[propget, id(15), helpstring("Name of Tag for tag slices")] HRESULT TagName([out, retval] BSTR *pVal);
+		[propget, id(16), helpstring("Current position in file")] HRESULT Position([out, retval] long *pVal);
+		[propput, id(16), helpstring("Current position in file")] HRESULT Position([in] long newVal);
+		[propget, id(17), helpstring("Header level (h1-h9 = 1-9)")] HRESULT HdrLevel([out, retval] short *pVal);
+		[propget, id(18), helpstring("Index of maximum parameter in current tag")] HRESULT MaxParam([out, retval] short *pVal);
+		[propget, id(19), helpstring("Convert Tag to string")] HRESULT ToString([out, retval] BSTR *pVal);
+		[propget, id(20), helpstring("Position in file in percent")] HRESULT Percent([out, retval] short *pVal);
+		[id(21), helpstring("Combine a base and relative URL")] HRESULT URLCombine([in] BSTR baseURL, [in] BSTR relativeURL, [in] BOOL escapeChars, [out, retval] BSTR *combinedURL);
+		[id(22), helpstring("Canonicalize a URL")] HRESULT URLCanonicalize([in] BSTR rawURL, [in] BOOL escapeChars, [out, retval] BSTR *canonURL);
+		[id(23), helpstring("Remove a parameter from the tag")] HRESULT RemoveParam([in] VARIANT param);
+	};
+
+	
+
+	[
+		object,
+		uuid(AF469F01-13E3-11D1-8988-444553540000),
+		dual,
+		helpstring("IStringAccumulator Interface"),
+		pointer_default(unique)
+	]
+	interface IStringAccumulator : IDispatch
+	{
+		[id(1), helpstring("method Reset")] HRESULT Reset();
+		[id(2), helpstring("method Add")] HRESULT Add(BSTR inps);
+		[id(3), helpstring("method AddCR")] HRESULT AddCR(BSTR inps);
+		[propget, id(4), helpstring("property String")] HRESULT String([out, retval] BSTR *pVal);
+		[propput, id(4), helpstring("property String")] HRESULT String([in] BSTR newVal);
+		[propget, id(5), helpstring("property Length")] HRESULT Length([out, retval] long *pVal);
+		[propget, id(6), helpstring("property IsEmpty")] HRESULT IsEmpty([out, retval] BOOL *pVal);
+	};
+[
+	uuid(053957F0-CB0A-11D0-8988-444553540000),
+	version(1.0),
+	helpstring("HtmlZap ATL Control")
+]
+library HTMLZAPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(053957FE-CB0A-11D0-8988-444553540000),
+		helpstring("HtmlZap ATL Control")
+	]
+	coclass HtmlParse
+	{
+		[default] interface IHtmlParse;
+	};
+	[
+		uuid(AF469F02-13E3-11D1-8988-444553540000),
+		helpstring("StringAccumulator Control")
+	]
+	coclass StringAccumulator
+	{
+		[default] interface IStringAccumulator;
+	};
+};
