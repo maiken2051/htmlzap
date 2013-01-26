@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Htmlzap", "Htmlzap.vcxproj", "{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Htmlzap", "Htmlzap.vcxproj", "{8F8D309E-FB7B-E18B-B7B5-475E5A132956}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +13,18 @@ Global
 		Unicode Release MinSize|Win32 = Unicode Release MinSize|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Debug|Win32.ActiveCfg = Debug|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Debug|Win32.Build.0 = Debug|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Release MinDependency|Win32.ActiveCfg = Release MinDependency|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Release MinDependency|Win32.Build.0 = Release MinDependency|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Release MinSize|Win32.ActiveCfg = Release MinSize|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Release MinSize|Win32.Build.0 = Release MinSize|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Unicode Release MinDependency|Win32.ActiveCfg = Unicode Release MinDependency|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Unicode Release MinDependency|Win32.Build.0 = Unicode Release MinDependency|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Unicode Release MinSize|Win32.ActiveCfg = Unicode Release MinSize|Win32
-		{65B6C222-F6BB-8187-4FB1-BA3F86733DEF}.Unicode Release MinSize|Win32.Build.0 = Unicode Release MinSize|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Debug|Win32.Build.0 = Debug|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Release MinDependency|Win32.ActiveCfg = Release MinDependency|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Release MinDependency|Win32.Build.0 = Release MinDependency|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Release MinSize|Win32.ActiveCfg = Release MinSize|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Release MinSize|Win32.Build.0 = Release MinSize|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Unicode Release MinDependency|Win32.ActiveCfg = Unicode Release MinDependency|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Unicode Release MinDependency|Win32.Build.0 = Unicode Release MinDependency|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Unicode Release MinSize|Win32.ActiveCfg = Unicode Release MinSize|Win32
+		{8F8D309E-FB7B-E18B-B7B5-475E5A132956}.Unicode Release MinSize|Win32.Build.0 = Unicode Release MinSize|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
